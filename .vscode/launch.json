@@ -5,7 +5,14 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Download and Run",
+			"name": "1. Calibrate (download and run)",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/calibrate.py",
+			"interactiveTerminal": false
+		},
+		{
+			"name": "2. Fire Robot main.py (download and run)",
 			"type": "ev3devBrowser",
 			"request": "launch",
 			"program": "/home/robot/${workspaceRootFolderName}/main.py",
