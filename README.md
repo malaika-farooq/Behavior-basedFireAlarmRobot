@@ -2,8 +2,7 @@
 
 CSE 4360/5364 Project 2. A LEGO EV3 robot that explores an unknown maze, finds the fire (a candle on a black pad), raises an alarm, and blows the candle out with a fan.
 
-Written in Pybricks MicroPython, using only basic motor and sensor functions.
-
+Written in Pyb
 ## Hardware
 
 | Part | Port |
@@ -19,11 +18,13 @@ Written in Pybricks MicroPython, using only basic motor and sensor functions.
 ## Behaviors (subsumption, highest priority first)
 
 1. **Extinguish:** moves onto the pad and runs the fan while the alarm sounds.
-2. **Goal finding:** a dark floor reading, confirmed while stopped, means the fire is found and the alarm starts.
-3. **Escape:** after a bumper hit, backs up and turns exactly 90° using the gyro. The direction comes from the left sonar and a short memory of directions found blocked.
-4. **Depart:** at times turns away from the wall to cross the room and reach other areas.
-5. **Wall following:** keeps the wall on the left. Where the wall ends, it turns left into the next room.
-6. **Wander:** drives straight, holding its gyro heading, until it hits something.
+2. **Tipped:** if the floor disappears for 3 s, the robot has fallen over or been lifted. It stops and waits to be set back up.
+3. **Goal finding:** a dark floor reading, confirmed while stopped, means the fire is found and the alarm starts.
+4. **Escape:** after a hit, backs up and turns using the gyro by the left-hand rule: left if the left is open, otherwise right, and a 180° turn if it is hit again right away.
+5. **Wall following:** keeps the wall on the left while staying on the 90° grid. Where the wall ends, it turns left into the next room. After a full loop it turns away once.
+6. **Wander:** drives straight on the grid until it hits something.
+
+The robot follows the **left-hand rule** for exploration. The start heading defines a 90° grid, so place the robot square to the walls.
 
 ## Files
 

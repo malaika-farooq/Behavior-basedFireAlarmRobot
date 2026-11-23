@@ -17,6 +17,13 @@
 			"request": "launch",
 			"program": "/home/robot/${workspaceRootFolderName}/main.py",
 			"interactiveTerminal": false
+		},
+		{
+			"name": "3. Stop all motors",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/stop.py",
+			"interactiveTerminal": false
 		}
 	]
 }
