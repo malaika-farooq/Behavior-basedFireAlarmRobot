@@ -8,7 +8,7 @@
 			"name": "1. Calibrate (download and run)",
 			"type": "ev3devBrowser",
 			"request": "launch",
-			"program": "/home/robot/${workspaceRootFolderName}/calibrate.py",
+			"program": "/home/robot/${workspaceRootFolderName}/tools/calibrate.py",
 			"interactiveTerminal": false
 		},
 		{
@@ -22,7 +22,7 @@
 			"name": "3. Stop all motors",
 			"type": "ev3devBrowser",
 			"request": "launch",
-			"program": "/home/robot/${workspaceRootFolderName}/stop.py",
+			"program": "/home/robot/${workspaceRootFolderName}/tools/stop.py",
 			"interactiveTerminal": false
 		}
 	]

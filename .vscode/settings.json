@@ -3,5 +3,7 @@
 	"files.eol": "\n",
 	"debug.openDebug": "neverOpen",
 	"python.linting.enabled": false,
-	"python.languageServer": "Default"
+	"python.languageServer": "Default",
+	// do not copy the PC simulator, the report or caches to the EV3
+	"ev3devBrowser.download.exclude": "{**/.*,LICENSE,README.md,simulator/**,**/__pycache__/**,*.docx,*.pdf,~$*}"
 }
