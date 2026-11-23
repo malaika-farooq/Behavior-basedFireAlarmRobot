@@ -1096,6 +1096,7 @@ class Extinguish:
         side = 1
         while clock.time() - t < FAN_MS:
             turn_to(base + side * SWEEP_DEG * 1000)
+            log('E', self.name, 'fan %d deg/s' % fan.speed())   # proves the fan really turns
             side = -side
             ev3.speaker.beep(1000, 200)
         turn_to(base)
@@ -1127,8 +1128,8 @@ def main():
     S.thresh = PAD_MAX
     S.detect_ok = S.floor >= MIN_FLOOR
     print('floor =', S.floor, ' pad threshold =', S.thresh)
-    log('E', 'START', 'floor=%d thresh=%d BASE=%d WALL_TARGET=%d LEFT_OPEN=%d mode=%s' % (
-        S.floor, S.thresh, BASE, WALL_TARGET, LEFT_OPEN_MM, EXPLORE))
+    log('E', 'START', 'floor=%d thresh=%d BASE=%d WALL_TARGET=%d LEFT_OPEN=%d mode=%s battery=%dmV' % (
+        S.floor, S.thresh, BASE, WALL_TARGET, LEFT_OPEN_MM, EXPLORE, ev3.battery.voltage()))
     print('gyro:', 'connected' if gyro is not None else 'NOT found - turns use encoders')
     if not S.detect_ok:
         print('FIRE DETECTION OFF: floor reads', S.floor)

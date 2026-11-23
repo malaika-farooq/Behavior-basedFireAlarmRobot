@@ -20,5 +20,9 @@ class _Sc:
             world.found_xy = (world.x, world.y)
 
 
+class _B:
+    def voltage(self): return 8000
+
+
 class EV3Brick:
-    speaker = _S(); light = _L(); screen = _Sc()
+    speaker = _S(); light = _L(); screen = _Sc(); battery = _B()

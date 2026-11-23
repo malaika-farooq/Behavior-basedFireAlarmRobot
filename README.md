@@ -11,6 +11,7 @@ It's written in Pybricks MicroPython and uses only basic motor and sensor calls 
 | **`main.py`** | **The robot program: all behaviors and the subsumption control.** This is the project code. | EV3 |
 | `tools/calibrate.py` | Sonar check: reads the left sonar at 10, 15, 20 and 30 cm and prints the error. | EV3 |
 | `tools/stop.py` | Stops all motors if a cancelled run left one running. | EV3 |
+| `tools/fan_test.py` | Runs the fan 5 s at full power and prints its real speed. | EV3 |
 | `simulator/` | PC simulator that runs the real `main.py` in a 2-D arena. It isn't copied to the EV3. See [simulator/README.md](simulator/README.md). | PC |
 | `Project2_Fire_Alarm_Robot_Report.docx` | The report. | |
 

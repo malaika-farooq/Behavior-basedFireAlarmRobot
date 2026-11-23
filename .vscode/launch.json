@@ -24,6 +24,13 @@
 			"request": "launch",
 			"program": "/home/robot/${workspaceRootFolderName}/tools/stop.py",
 			"interactiveTerminal": false
+		},
+		{
+			"name": "4. Fan test",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/tools/fan_test.py",
+			"interactiveTerminal": false
 		}
 	]
 }
